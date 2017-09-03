@@ -1,0 +1,28 @@
+---
+title: "UMB Map"
+author: "ZCao"
+date: "September 2, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Overview
+
+This is week2 assignment for Developing Data product creating a web page using R Markdown that features a map of University of Maryland Baltimore (UMB) Leaflet.
+
+
+## Load Leaflet
+
+```{r , echo=TRUE}
+library(leaflet)
+```
+## Code 
+
+```{r , echo=TRUE}
+map <- leaflet() %>% addTiles()
+map <- map %>% addMarkers( lat = 39.289213, lng = -76.62497, popup = "UMB")
+map
+```
